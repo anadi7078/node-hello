@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_anadi7078_node_hello_1710930675007-push-trigger-input-set
+  identifier: Build_anadi7078_node_hello_1710930675007pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_anadi7078_node_hello_1710930675007
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
