@@ -14,11 +14,14 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: Echo Welcome Message
-                  identifier: Echo_Welcome_Message
+                  identifier: build_dotnet_app
+                  name: Build DotNet App
                   spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: |-
+                      dotnet restore
+                      dotnet build --no-restore
+                      dotnet test --no-build --verbosity normal
           platform:
             os: Linux
             arch: Amd64
