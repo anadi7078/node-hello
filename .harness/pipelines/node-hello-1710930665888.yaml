@@ -18,7 +18,9 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Sh
-                    command: npm start
+                    command: |-
+                      npm install
+                      npm publish
           platform:
             os: Linux
             arch: Amd64
